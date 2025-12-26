@@ -42,8 +42,8 @@
   <text x="1360" y="1072" class="subtitle-text">Based on RFIDler architecture</text>
   <text x="1360" y="1100" class="subtitle-text">Simplified design for Hi-Tag 2 / Paxton NET2 emulation</text>
   <text x="1360" y="1128" class="subtitle-text">Flipper Zero + Arduino Integration</text>
-  <text x="1360" y="1158" class="title-text">Title: Hi-Tag 2 Emulator (CORRECTED)</text>
-  <text x="1360" y="1175" class="subtitle-text">Size: A3 | Date: 2025-12-26 | Rev: 1.1</text>
+  <text x="1360" y="1158" class="title-text">Title: Hi-Tag 2 Emulator (FULLY CORRECTED)</text>
+  <text x="1360" y="1175" class="subtitle-text">Size: A3 | Date: 2025-12-26 | Rev: 2.0</text>
   <text x="1700" y="1175" class="subtitle-text">Sheet 1/1</text>
   
   <!-- ==================== U1 - PIC32MX795F512L (Center) ==================== -->
@@ -105,32 +105,32 @@
   <text x="655" y="653" class="pin-text">VCAP</text>
   <text x="605" y="653" text-anchor="end" class="pin-num">85</text>
   
-  <!-- SPI Pins (ACTIVE DIRECTLY - no RA0 confusion) -->
+  <!-- SPI Pins (CORRECTED - match netlist: pin9=MOSI, pin72=MISO, pin70=SCK, pin69=CS) -->
   <line x1="610" y1="700" x2="650" y2="700" class="wire"/>
-  <text x="655" y="703" class="pin-text">SDI1</text>
-  <text x="605" y="703" text-anchor="end" class="pin-num">25</text>
-  
+  <text x="655" y="703" class="pin-text">SDO1/MOSI</text>
+  <text x="605" y="703" text-anchor="end" class="pin-num">9</text>
+
   <line x1="610" y1="720" x2="650" y2="720" class="wire"/>
-  <text x="655" y="723" class="pin-text">SDO1</text>
+  <text x="655" y="723" class="pin-text">SDI1/MISO</text>
   <text x="605" y="723" text-anchor="end" class="pin-num">72</text>
-  
+
   <line x1="610" y1="740" x2="650" y2="740" class="wire"/>
   <text x="655" y="743" class="pin-text">SCK1</text>
   <text x="605" y="743" text-anchor="end" class="pin-num">70</text>
-  
+
   <line x1="610" y1="760" x2="650" y2="760" class="wire"/>
-  <text x="655" y="763" class="pin-text">SS1</text>
+  <text x="655" y="763" class="pin-text">SS1/CS</text>
   <text x="605" y="763" text-anchor="end" class="pin-num">69</text>
   
   <!-- PIC32 Right Side Pins -->
-  <!-- Status LEDs -->
+  <!-- Status LEDs - CORRECTED PINS (10, 11 per netlist) -->
   <line x1="970" y1="370" x2="1010" y2="370" class="wire"/>
-  <text x="965" y="373" text-anchor="end" class="pin-text">RB10</text>
-  <text x="1015" y="373" class="pin-num">23</text>
+  <text x="965" y="373" text-anchor="end" class="pin-text">STATUS1</text>
+  <text x="1015" y="373" class="pin-num">10</text>
   
   <line x1="970" y1="390" x2="1010" y2="390" class="wire"/>
-  <text x="965" y="393" text-anchor="end" class="pin-text">RB11</text>
-  <text x="1015" y="393" class="pin-num">24</text>
+  <text x="965" y="393" text-anchor="end" class="pin-text">STATUS2</text>
+  <text x="1015" y="393" class="pin-num">11</text>
   
   <!-- Control Signals - CORRECTED PINS -->
   <line x1="970" y1="430" x2="1010" y2="430" class="wire"/>
@@ -385,7 +385,7 @@
   <line x1="200" y1="815" x2="200" y2="835" class="gnd-wire"/>
   <line x1="190" y1="835" x2="210" y2="835" class="gnd-symbol"/>
   
-  <!-- R7 MOSI Series Resistor -->
+  <!-- R7 MOSI Series Resistor - connects to pin 9 (SDO1/MOSI) -->
   <line x1="200" y1="715" x2="280" y2="715" class="wire"/>
   <line x1="280" y1="715" x2="280" y2="700" class="wire"/>
   <line x1="280" y1="700" x2="350" y2="700" class="wire"/>
@@ -394,15 +394,16 @@
   <text x="370" y="688" class="ref-text">R7</text>
   <text x="370" y="718" class="value-text">100Ω</text>
   <text x="250" y="710" class="net-label">MOSI</text>
-  <text x="500" y="695" class="net-label">SPI_MOSI</text>
-  
-  <!-- MISO Direct -->
+  <text x="500" y="695" class="net-label">SDO1/MOSI</text>
+
+  <!-- MISO Direct - connects to pin 72 (SDI1/MISO) -->
   <line x1="200" y1="735" x2="280" y2="735" class="wire"/>
   <line x1="280" y1="735" x2="280" y2="720" class="wire"/>
   <line x1="280" y1="720" x2="610" y2="720" class="wire"/>
   <text x="250" y="730" class="net-label">MISO</text>
-  
-  <!-- R8 SCK Series Resistor -->
+  <text x="500" y="715" class="net-label">SDI1/MISO</text>
+
+  <!-- R8 SCK Series Resistor - connects to pin 70 (SCK1) -->
   <line x1="200" y1="755" x2="280" y2="755" class="wire"/>
   <line x1="280" y1="755" x2="280" y2="740" class="wire"/>
   <line x1="280" y1="740" x2="350" y2="740" class="wire"/>
@@ -411,24 +412,26 @@
   <text x="370" y="728" class="ref-text">R8</text>
   <text x="370" y="758" class="value-text">100Ω</text>
   <text x="250" y="750" class="net-label">SCK</text>
-  <text x="500" y="735" class="net-label">SPI_SCK</text>
-  
-  <!-- CS Direct -->
+  <text x="500" y="735" class="net-label">SCK1/SCK</text>
+
+  <!-- CS Direct - connects to pin 69 (SS1/CS) -->
   <line x1="200" y1="775" x2="280" y2="775" class="wire"/>
   <line x1="280" y1="775" x2="280" y2="760" class="wire"/>
   <line x1="280" y1="760" x2="610" y2="760" class="wire"/>
   <text x="250" y="770" class="net-label">CS</text>
+  <text x="500" y="755" class="net-label">SS1/CS</text>
   
   <!-- ==================== STATUS LEDs ==================== -->
   <text x="1100" y="330" class="ref-text" style="font-size:11px">STATUS LEDs</text>
   
-  <!-- LED1 Green - Power/Status -->
+  <!-- LED1 Green - Power/Status (CORRECTED: pin 10->R2->LED1->GND) -->
   <line x1="1010" y1="370" x2="1080" y2="370" class="wire"/>
   <text x="1040" y="365" class="net-label">STATUS1</text>
   <rect x="1080" y="363" width="35" height="14" stroke="#990000" stroke-width="1.5" fill="none"/>
   <text x="1098" y="358" class="ref-text">R2</text>
   <text x="1120" y="373" class="value-text">330Ω</text>
   <line x1="1115" y1="370" x2="1140" y2="370" class="wire"/>
+  <text x="1125" y="365" class="net-label" style="font-size:8px">LED1_K</text>
   <!-- LED symbol -->
   <polygon points="1140,360 1140,380 1160,370" stroke="#990000" stroke-width="1.5" fill="none"/>
   <line x1="1160" y1="360" x2="1160" y2="380" stroke="#990000" stroke-width="1.5"/>
@@ -437,23 +440,22 @@
   <line x1="1160" y1="370" x2="1180" y2="370" class="gnd-wire"/>
   <line x1="1180" y1="370" x2="1180" y2="390" class="gnd-wire"/>
   <line x1="1170" y1="390" x2="1190" y2="390" class="gnd-symbol"/>
-  
-  <!-- LED2 Red - RF Activity -->
+
+  <!-- LED2 Red - RF Activity (CORRECTED: pin 11->R3->LED2->GND) -->
   <line x1="1010" y1="390" x2="1080" y2="390" class="wire"/>
-  <text x="1040" y="410" class="net-label">STATUS2</text>
-  <rect x="1080" y="415" width="35" height="14" stroke="#990000" stroke-width="1.5" fill="none"/>
-  <text x="1098" y="410" class="ref-text">R3</text>
-  <text x="1120" y="425" class="value-text">330Ω</text>
-  <line x1="1010" y1="390" x2="1010" y2="422" class="wire"/>
-  <line x1="1010" y1="422" x2="1080" y2="422" class="wire"/>
-  <line x1="1115" y1="422" x2="1140" y2="422" class="wire"/>
-  <polygon points="1140,412 1140,432 1160,422" stroke="#990000" stroke-width="1.5" fill="none"/>
-  <line x1="1160" y1="412" x2="1160" y2="432" stroke="#990000" stroke-width="1.5"/>
-  <text x="1150" y="447" class="ref-text">LED2</text>
-  <text x="1150" y="460" class="value-text">Red</text>
-  <line x1="1160" y1="422" x2="1180" y2="422" class="gnd-wire"/>
-  <line x1="1180" y1="422" x2="1180" y2="442" class="gnd-wire"/>
-  <line x1="1170" y1="442" x2="1190" y2="442" class="gnd-symbol"/>
+  <text x="1040" y="385" class="net-label">STATUS2</text>
+  <rect x="1080" y="383" width="35" height="14" stroke="#990000" stroke-width="1.5" fill="none"/>
+  <text x="1098" y="378" class="ref-text">R3</text>
+  <text x="1120" y="393" class="value-text">330Ω</text>
+  <line x1="1115" y1="390" x2="1140" y2="390" class="wire"/>
+  <text x="1125" y="385" class="net-label" style="font-size:8px">LED2_K</text>
+  <polygon points="1140,380 1140,400 1160,390" stroke="#990000" stroke-width="1.5" fill="none"/>
+  <line x1="1160" y1="380" x2="1160" y2="400" stroke="#990000" stroke-width="1.5"/>
+  <text x="1150" y="415" class="ref-text">LED2</text>
+  <text x="1150" y="428" class="value-text">Red</text>
+  <line x1="1160" y1="390" x2="1180" y2="390" class="gnd-wire"/>
+  <line x1="1180" y1="390" x2="1180" y2="410" class="gnd-wire"/>
+  <line x1="1170" y1="410" x2="1190" y2="410" class="gnd-symbol"/>
   
   <!-- ==================== CONTROL INTERFACE ==================== -->
   <text x="1250" y="330" class="ref-text" style="font-size:11px">CONTROL INTERFACE</text>
@@ -672,15 +674,17 @@
   <text x="50" y="1080" class="ref-text" style="font-size:11px">DESIGN NOTES:</text>
   <text x="50" y="1095" class="value-text">• All VDD pins connected to +3V3 rail</text>
   <text x="50" y="1110" class="value-text">• All VSS pins connected to GND</text>
-  <text x="50" y="1125" class="value-text">• SPI: SDI1=pin25, SDO1=pin72, SCK1=pin70, SS1=pin69</text>
-  <text x="50" y="1140" class="value-text">• Control: RA0/TX_EN=pin17, RA1/IRQ=pin38</text>
-  <text x="50" y="1155" class="value-text">• RF: RB5/RF_OUT=pin18, RB4/RF_IN=pin12</text>
-  <text x="50" y="1170" class="value-text">• ICSP: PGEC2=pin26, PGED2=pin27</text>
-  
-  <text x="500" y="1095" class="value-text">• Crystal: 8MHz with 18pF load caps</text>
+  <text x="50" y="1125" class="value-text">• SPI: SDO1/MOSI=pin9, SDI1/MISO=pin72, SCK1=pin70, SS1/CS=pin69</text>
+  <text x="50" y="1140" class="value-text">• Status LEDs: STATUS1=pin10, STATUS2=pin11</text>
+  <text x="50" y="1155" class="value-text">• Control: RA0/TX_EN=pin17, RA1/IRQ=pin38</text>
+  <text x="50" y="1170" class="value-text">• RF: RB5/RF_OUT=pin18, RB4/RF_IN=pin12</text>
+  <text x="50" y="1185" class="value-text">• ICSP: PGEC2/PGC=pin26, PGED2/PGD=pin27</text>
+
+  <text x="500" y="1095" class="value-text">• Crystal: 8MHz with 18pF load caps on pins 63/64</text>
   <text x="500" y="1110" class="value-text">• VCAP: 10µF capacitor required on pin 85</text>
   <text x="500" y="1125" class="value-text">• Antenna tuning: 3x 4.7nF = 14.1nF total</text>
   <text x="500" y="1140" class="value-text">• LED current: (3.3V-2V)/330Ω = 4mA</text>
   <text x="500" y="1155" class="value-text">• SPI series resistors: 100Ω for signal integrity</text>
+  <text x="500" y="1170" class="value-text">• MCLR: 10kΩ pull-up to +3V3, accessible on J2/J3</text>
   
 </svg>
