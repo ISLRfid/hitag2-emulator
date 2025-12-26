@@ -120,16 +120,15 @@ HiTag2_Emulator_KiCad/
 │   ├── SOT-23-5.kicad_mod
 │   ├── R_0603_1608Metric.kicad_mod
 │   ├── C_0805_2012Metric.kicad_mod
+│   ├── C_0603_1608Metric.kicad_mod
 │   ├── LED_0603_1608Metric.kicad_mod
 │   ├── Crystal_HC49-U_Vertical.kicad_mod
 │   ├── PinHeader_1x06_P2.54mm_Vertical.kicad_mod
 │   ├── PinHeader_1x04_P2.54mm_Vertical.kicad_mod
 │   ├── PinHeader_1x03_P2.54mm_Vertical.kicad_mod
 │   └── PinHeader_1x02_P2.54mm_Vertical.kicad_mod
-├── docs/
-│   ├── Circuit_Design.md        # Detailed circuit documentation
-│   └── BOM.csv                  # Bill of Materials
-└── gerbers/                     # Output directory for manufacturing
+└── ../bom/
+    └── BOM.csv                  # Bill of Materials
 ```
 
 ## Component Summary
