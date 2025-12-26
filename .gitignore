@@ -1,0 +1,51 @@
+# KiCad backup files
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups/
+*.bak
+*~
+\#*\#
+*.lck
+
+# KiCad auto-save files
+*.000
+*.kicad_prl
+
+# Build outputs
+*.hex
+*.elf
+*.map
+*.lst
+*.o
+*.d
+
+# IDE files
+.idea/
+*.code-workspace
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Gerber production files (keep in gerbers/ folder)
+*.gbr
+*.drl
+!gerbers/*.gbr
+!gerbers/*.drl
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.env

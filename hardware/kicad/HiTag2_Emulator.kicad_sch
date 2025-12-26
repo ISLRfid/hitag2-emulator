@@ -1,0 +1,1388 @@
+(kicad_sch
+  (version 20231120)
+  (generator "eeschema")
+  (generator_version "9.0")
+  (uuid "484a911a-6e56-4710-b8cf-d3bc347925c1")
+  (paper "A4")
+  (title_block
+    (title "Hi-Tag 2 Emulator")
+    (date "2025-12-25")
+    (rev "1.0")
+    (company "Flipper Zero + Arduino Integration")
+    (comment 1 "Simplified design for Hi-Tag 2 / Paxton NET2 emulation")
+    (comment 2 "Based on RFIDler architecture")
+  )
+
+  (lib_symbols
+  )
+
+
+  (symbol
+    (lib_id "HiTag2_Emulator:AMS1117-3.3")
+    (at 40 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "840c3f1a-dcfb-4af2-8f60-a7196cecaf83")
+    (property "Reference" "U2"
+      (at 40 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "AMS1117-3.3"
+      (at 40 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:SOT-223-3_TabPin2"
+      (at 40 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 40 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 25 35 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "2171b16f-2cf9-4079-aa51-268b9c927e4e")
+    (property "Reference" "C1"
+      (at 25 32 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "22µF"
+      (at 25 38 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:C_0805_2012Metric"
+      (at 25 35 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 25 35 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 55 35 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "14cd1bc3-92b0-44be-9226-83e7dba7cab6")
+    (property "Reference" "C2"
+      (at 55 32 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "10µF"
+      (at 55 38 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:C_0805_2012Metric"
+      (at 55 35 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 55 35 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:PIC32MX795F512L")
+    (at 120 80 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "642fc475-9c10-4dca-ab12-74b0067ae4a1")
+    (property "Reference" "U1"
+      (at 120 77 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "PIC32MX795F512L-80I/PF"
+      (at 120 83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:TQFP-100_14x14mm_P0.5mm"
+      (at 120 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 120 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:Crystal")
+    (at 170 60 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5d3716ef-af2a-49ad-b3ed-e79a5330729f")
+    (property "Reference" "Y1"
+      (at 170 57 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "8MHz"
+      (at 170 63 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:Crystal_HC49-U_Vertical"
+      (at 170 60 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 170 60 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 165 70 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "bd56e1bb-f68d-4bf1-83eb-68f1cb326686")
+    (property "Reference" "C9"
+      (at 165 67 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "18pF"
+      (at 165 73 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 165 70 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 165 70 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 175 70 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7318c26f-ab76-4306-8917-f1ce44db4035")
+    (property "Reference" "C10"
+      (at 175 67 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "18pF"
+      (at 175 73 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 175 70 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 175 70 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 170 90 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0deee4cc-2409-4b6c-bff1-81ad34b0792d")
+    (property "Reference" "C11"
+      (at 170 87 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "10µF"
+      (at 170 93 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:C_0805_2012Metric"
+      (at 170 90 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 170 90 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 80 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "aa834d38-be61-4656-88b2-123b05612465")
+    (property "Reference" "C3"
+      (at 80 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100nF"
+      (at 80 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 80 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 80 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 90 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b49d751f-84f7-442d-874e-93a8d718b2ed")
+    (property "Reference" "C4"
+      (at 90 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100nF"
+      (at 90 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 90 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 90 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 100 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "1ab7c209-db6e-4550-93b1-fab3d2b456a3")
+    (property "Reference" "C5"
+      (at 100 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100nF"
+      (at 100 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 100 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 100 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 110 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7703577d-9cb7-431c-80af-bb49782fb794")
+    (property "Reference" "C6"
+      (at 110 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100nF"
+      (at 110 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 110 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 110 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 120 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "1ac45179-d34d-471c-875a-aa9e87cd57f3")
+    (property "Reference" "C7"
+      (at 120 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100nF"
+      (at 120 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 120 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 120 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 130 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "e0bc43fa-2257-4b53-a6b1-931b16febc5d")
+    (property "Reference" "C8"
+      (at 130 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100nF"
+      (at 130 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 130 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 130 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:R")
+    (at 75 60 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "1ecc1210-d453-4056-b5ab-3307467fb5e5")
+    (property "Reference" "R1"
+      (at 75 57 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "10kΩ"
+      (at 75 63 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 75 60 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 75 60 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:LM358")
+    (at 40 100 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "dcae653b-24b2-46c7-bac5-a949ddb031b0")
+    (property "Reference" "U3"
+      (at 40 97 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LM358"
+      (at 40 103 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:SOIC-8_3.9x4.9mm_P1.27mm"
+      (at 40 100 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 40 100 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:SN74LVC1G17")
+    (at 70 100 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "041f63db-7d9c-4c29-a403-18e8633db007")
+    (property "Reference" "U4"
+      (at 70 97 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SN74LVC1G17"
+      (at 70 103 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:SOT-23-5"
+      (at 70 100 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 70 100 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:R")
+    (at 40 85 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b5cd2eaf-ed1b-48f2-a163-73a87399f563")
+    (property "Reference" "R4"
+      (at 40 82 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100kΩ"
+      (at 40 88 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 40 85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 40 85 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:R")
+    (at 25 100 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "d1df7e2d-3252-4b97-9648-8ba4878a5089")
+    (property "Reference" "R5"
+      (at 25 97 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100kΩ"
+      (at 25 103 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 25 100 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 25 100 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:R")
+    (at 25 115 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b3676de2-8d35-4862-ba8b-fdb124811343")
+    (property "Reference" "R6"
+      (at 25 112 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "1MΩ"
+      (at 25 118 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 25 115 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 25 115 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 40 130 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f251ed92-a49e-40a4-ac38-5d6a25fb9ebb")
+    (property "Reference" "C12"
+      (at 40 127 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "4.7nF"
+      (at 40 133 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 40 130 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 40 130 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 50 130 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "59cc2fc8-d295-47fd-9942-ac4ef7a82e74")
+    (property "Reference" "C13"
+      (at 50 127 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "4.7nF"
+      (at 50 133 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 50 130 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 50 130 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:C")
+    (at 60 130 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9d3346b9-80d3-43b6-a16c-11d2216bcd2c")
+    (property "Reference" "C14"
+      (at 60 127 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "4.7nF"
+      (at 60 133 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 60 130 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 60 130 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:LED")
+    (at 170 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "d4458f09-7663-40ac-bd47-4c0ea71f4f8c")
+    (property "Reference" "LED1"
+      (at 170 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "Green"
+      (at 170 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:LED_0603_1608Metric"
+      (at 170 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 170 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:LED")
+    (at 170 40 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9ff9eb25-e941-4ef4-ac58-e5fddccb19d4")
+    (property "Reference" "LED2"
+      (at 170 37 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "Red"
+      (at 170 43 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:LED_0603_1608Metric"
+      (at 170 40 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 170 40 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:R")
+    (at 155 30 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8eda5537-84e9-4aa8-bc2e-2ed875b0fcc8")
+    (property "Reference" "R2"
+      (at 155 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "330Ω"
+      (at 155 33 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 155 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 155 30 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:R")
+    (at 155 40 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "e309c0ba-6a99-434d-94e5-5e8b2fa09c38")
+    (property "Reference" "R3"
+      (at 155 37 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "330Ω"
+      (at 155 43 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 155 40 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 155 40 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:R")
+    (at 170 110 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "cdc52aca-83e2-434d-894e-bbc555edbc80")
+    (property "Reference" "R7"
+      (at 170 107 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100Ω"
+      (at 170 113 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 170 110 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 170 110 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:R")
+    (at 170 120 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9a3c3f9f-5478-4e10-aa66-ddc2afa58ed8")
+    (property "Reference" "R8"
+      (at 170 117 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "100Ω"
+      (at 170 123 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:R_0603_1608Metric"
+      (at 170 120 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 170 120 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:Conn_01x06")
+    (at 200 80 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "6a1f71e0-13c0-4435-9ba6-8ee8fe115996")
+    (property "Reference" "J1"
+      (at 200 77 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SPI_Arduino"
+      (at 200 83 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:PinHeader_1x06_P2.54mm_Vertical"
+      (at 200 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 200 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:Conn_01x04")
+    (at 200 110 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "110f400f-973b-4e77-beb8-fcd71fa6cdf1")
+    (property "Reference" "J2"
+      (at 200 107 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "CTRL_Arduino"
+      (at 200 113 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:PinHeader_1x04_P2.54mm_Vertical"
+      (at 200 110 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 200 110 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:Conn_01x03")
+    (at 200 60 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "124eecd6-8383-4839-bdf1-8b59e4e9c056")
+    (property "Reference" "J3"
+      (at 200 57 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "ICSP"
+      (at 200 63 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:PinHeader_1x03_P2.54mm_Vertical"
+      (at 200 60 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 200 60 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:Conn_01x02")
+    (at 40 145 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fb29f7d2-b764-40b6-9425-6004ae90c318")
+    (property "Reference" "J4"
+      (at 40 142 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "ANTENNA"
+      (at 40 148 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "HiTag2_Emulator:PinHeader_1x02_P2.54mm_Vertical"
+      (at 40 145 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 40 145 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:+5V")
+    (at 25 25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "91262e59-4e78-4f0e-b7c6-6e79a97aa755")
+    (property "Reference" "#PWR?"
+      (at 25 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+5V"
+      (at 25 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 25 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 25 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:+3V3")
+    (at 55 25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "d95cc27d-42a1-460e-8524-ac284debb975")
+    (property "Reference" "#PWR?"
+      (at 55 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3"
+      (at 55 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 55 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 55 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:+3V3")
+    (at 80 25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "6a7c9d7b-0868-4496-bac1-d2e1577a50a9")
+    (property "Reference" "#PWR?"
+      (at 80 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3"
+      (at 80 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 80 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 80 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:+3V3")
+    (at 170 25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "8dbfaeaf-64bc-4003-9f4a-45c02dea19fc")
+    (property "Reference" "#PWR?"
+      (at 170 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3V3"
+      (at 170 27 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 170 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 170 25 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:GND")
+    (at 40 45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "49ac6528-14d6-4965-bf4c-695b036dfe96")
+    (property "Reference" "#PWR?"
+      (at 40 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND"
+      (at 40 47 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 40 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 40 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:GND")
+    (at 25 45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "d4fdbee3-6e6c-4ba8-abc4-18b670d1e63f")
+    (property "Reference" "#PWR?"
+      (at 25 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND"
+      (at 25 47 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 25 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 25 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:GND")
+    (at 55 45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "997d14fd-e9b7-4934-946a-c2b395cd7416")
+    (property "Reference" "#PWR?"
+      (at 55 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND"
+      (at 55 47 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 55 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 55 45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:GND")
+    (at 165 80 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "aaea4115-5820-4de9-b4f2-a53f7d5b75a9")
+    (property "Reference" "#PWR?"
+      (at 165 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND"
+      (at 165 82 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 165 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 165 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (symbol
+    (lib_id "HiTag2_Emulator:GND")
+    (at 175 80 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "9e05f981-2a7f-4481-91a3-6449a4ccd665")
+    (property "Reference" "#PWR?"
+      (at 175 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND"
+      (at 175 82 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" ""
+      (at 175 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" ""
+      (at 175 80 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+  )
+
+  (wire
+    (pts (xy 20 30) (xy 28 30))
+    (stroke (width 0) (type default))
+    (uuid "82b2ef7a-a88f-4b06-9675-6ffc634d37fc")
+  )
+
+  (wire
+    (pts (xy 52 30) (xy 80 30))
+    (stroke (width 0) (type default))
+    (uuid "d05da276-ba9e-441b-9200-e806cf8adf16")
+  )
+
+  (wire
+    (pts (xy 52 30) (xy 55 30))
+    (stroke (width 0) (type default))
+    (uuid "c59ae68e-ff1c-46c5-ae2e-da5b52148b45")
+  )
+
+  (wire
+    (pts (xy 162 60) (xy 165 60))
+    (stroke (width 0) (type default))
+    (uuid "05c549d6-43f8-4ee7-aad9-8f36d656d658")
+  )
+
+  (wire
+    (pts (xy 177 60) (xy 180 60))
+    (stroke (width 0) (type default))
+    (uuid "6d807be7-84de-49ce-afbe-6b94a6360d49")
+  )
+
+  (wire
+    (pts (xy 75 55) (xy 75 60))
+    (stroke (width 0) (type default))
+    (uuid "2a6ba6b9-1a27-474a-b68d-222d940d993e")
+  )
+
+  (wire
+    (pts (xy 75 65) (xy 75 70))
+    (stroke (width 0) (type default))
+    (uuid "22c24201-12a8-43b3-8373-498e6b637da9")
+  )
+
+  (wire
+    (pts (xy 150 80) (xy 193 80))
+    (stroke (width 0) (type default))
+    (uuid "98f3eb17-2b9b-42aa-ace3-564717f296ff")
+  )
+
+  (wire
+    (pts (xy 150 83) (xy 193 83))
+    (stroke (width 0) (type default))
+    (uuid "f0510d76-ec2b-447e-bb4c-cf03bbbd5a82")
+  )
+
+  (wire
+    (pts (xy 150 86) (xy 193 86))
+    (stroke (width 0) (type default))
+    (uuid "4d96b7d2-49ff-4d74-acf9-efd1c3e3c8c2")
+  )
+
+  (wire
+    (pts (xy 150 89) (xy 193 89))
+    (stroke (width 0) (type default))
+    (uuid "9b8f6f13-b3d7-4927-ae54-da5122c45be9")
+  )
+
+  (wire
+    (pts (xy 150 95) (xy 193 110))
+    (stroke (width 0) (type default))
+    (uuid "a2635672-63c0-4f55-986a-351892206467")
+  )
+
+  (wire
+    (pts (xy 150 98) (xy 193 113))
+    (stroke (width 0) (type default))
+    (uuid "23f2d4a1-adc7-4a1d-a940-e1cf4d5bd114")
+  )
+
+  (wire
+    (pts (xy 145 30) (xy 150 30))
+    (stroke (width 0) (type default))
+    (uuid "4d9f595c-de4c-441c-b38f-8a2dd8b93e8c")
+  )
+
+  (wire
+    (pts (xy 145 40) (xy 150 40))
+    (stroke (width 0) (type default))
+    (uuid "2e5e91ed-9e97-4af4-9482-fb7ce30e1c72")
+  )
+
+  (wire
+    (pts (xy 40 135) (xy 40 140))
+    (stroke (width 0) (type default))
+    (uuid "9ac3214b-7c8b-42d7-a1ef-3c457cb3f814")
+  )
+
+  (wire
+    (pts (xy 50 135) (xy 50 140))
+    (stroke (width 0) (type default))
+    (uuid "5f2ecad4-047b-4aa0-98a6-890d1d41dd63")
+  )
+
+  (wire
+    (pts (xy 60 135) (xy 60 140))
+    (stroke (width 0) (type default))
+    (uuid "66bffb7d-2d4c-418e-8d13-78bfe0136c9c")
+  )
+
+  (label "VIN"
+    (at 25 30 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "843e6520-60d1-42a8-aa76-9b15fcee6964")
+  )
+
+  (label "3V3"
+    (at 55 30 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "eca4ab8d-903e-4070-a88f-5794508a1eb4")
+  )
+
+  (label "MCLR"
+    (at 75 70 270)
+    (effects (font (size 1.27 1.27)))
+    (uuid "5ad0cbaf-c77e-4149-9921-721d72fc671f")
+  )
+
+  (label "OSC1"
+    (at 165 60 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "02c4cfb7-ea9c-4ea6-ad1e-8fe8f8fefa4b")
+  )
+
+  (label "OSC2"
+    (at 175 60 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "4c79b760-947c-4051-b58a-a73f583ca28b")
+  )
+
+  (label "VCAP"
+    (at 170 90 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "174b3ba6-6bbc-4749-8ad5-b08f94bb2b5a")
+  )
+
+  (label "SDI1"
+    (at 150 80 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "50e8a889-eea9-483c-b9bb-1fe92f38cfe1")
+  )
+
+  (label "SDO1"
+    (at 150 83 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "5a7e84ac-0742-4e84-9b1f-155c54dd78ec")
+  )
+
+  (label "SCK1"
+    (at 150 86 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "1949eeee-4d29-4ce1-ac16-1724a13be70a")
+  )
+
+  (label "SS1"
+    (at 150 89 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "91a0807f-776f-42bc-be46-f59a64a8dd4f")
+  )
+
+  (label "TX_EN"
+    (at 150 95 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "2f5a5b6e-7496-4eb4-bd94-758ccc02ea33")
+  )
+
+  (label "IRQ"
+    (at 150 98 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "d087e8b7-56bd-4b16-a42d-944fd3e0f451")
+  )
+
+  (label "RF_OUT"
+    (at 150 105 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "96cd9990-5fe2-4c84-b817-7e068811020f")
+  )
+
+  (label "RF_IN"
+    (at 80 100 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "cfbdac50-2738-4556-bf01-a6d560cfa45b")
+  )
+
+  (label "COIL_A"
+    (at 40 140 270)
+    (effects (font (size 1.27 1.27)))
+    (uuid "15d88ac3-bcf5-4633-8bbf-c426303d90a2")
+  )
+
+  (label "STATUS1"
+    (at 145 30 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "b301e051-1314-4c69-b89b-8843e90b99f4")
+  )
+
+  (label "STATUS2"
+    (at 145 40 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "bd1a95ae-1edb-4064-a753-1727ab12aeb3")
+  )
+
+  (label "MOSI"
+    (at 193 80 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "05d4a260-7ef8-4fa3-947a-25681ee8042c")
+  )
+
+  (label "MISO"
+    (at 193 83 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "1725fd8b-ad40-451f-85cd-963e7534b610")
+  )
+
+  (label "SCK"
+    (at 193 86 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "c2279db4-e107-4970-a9e6-b90233713e62")
+  )
+
+  (label "CS"
+    (at 193 89 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "f545d3b8-30eb-4fb3-80bc-6479bc8a1fb9")
+  )
+
+)

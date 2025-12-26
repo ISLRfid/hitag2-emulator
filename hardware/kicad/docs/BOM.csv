@@ -1,0 +1,35 @@
+Reference,Value,Footprint,Description,Quantity,Supplier,Part Number,Unit Price
+U1,PIC32MX795F512L-80I/PF,TQFP-100_14x14mm_P0.5mm,Main MCU 80MHz 512KB Flash,1,Mouser,579-PIC32MX795F512LPF,$8.50
+U2,AMS1117-3.3,SOT-223-3_TabPin2,3.3V LDO Voltage Regulator,1,LCSC,C6186,$0.15
+U3,LM358,SOIC-8_3.9x4.9mm_P1.27mm,Dual Op-Amp,1,LCSC,C7950,$0.10
+U4,SN74LVC1G17,SOT-23-5,Single Schmitt Trigger Buffer,1,LCSC,C7464,$0.08
+Y1,8MHz,Crystal_HC49-U_Vertical,8MHz Crystal,1,LCSC,C12674,$0.15
+C1,22µF,C_0805_2012Metric,Input Bulk Capacitor,1,LCSC,C45783,$0.05
+C2,10µF,C_0805_2012Metric,Output Bulk Capacitor,1,LCSC,C15850,$0.03
+C3,100nF,R_0603_1608Metric,Decoupling Capacitor,1,LCSC,C14663,$0.01
+C4,100nF,R_0603_1608Metric,Decoupling Capacitor,1,LCSC,C14663,$0.01
+C5,100nF,R_0603_1608Metric,Decoupling Capacitor,1,LCSC,C14663,$0.01
+C6,100nF,R_0603_1608Metric,Decoupling Capacitor,1,LCSC,C14663,$0.01
+C7,100nF,R_0603_1608Metric,Decoupling Capacitor,1,LCSC,C14663,$0.01
+C8,100nF,R_0603_1608Metric,Decoupling Capacitor,1,LCSC,C14663,$0.01
+C9,18pF,R_0603_1608Metric,Crystal Load Capacitor,1,LCSC,C1644,$0.01
+C10,18pF,R_0603_1608Metric,Crystal Load Capacitor,1,LCSC,C1644,$0.01
+C11,10µF,C_0805_2012Metric,VCAP Capacitor,1,LCSC,C15850,$0.03
+C12,4.7nF,R_0603_1608Metric,Antenna Tuning Capacitor,1,LCSC,C53987,$0.01
+C13,4.7nF,R_0603_1608Metric,Antenna Tuning Capacitor,1,LCSC,C53987,$0.01
+C14,4.7nF,R_0603_1608Metric,Antenna Tuning Capacitor,1,LCSC,C53987,$0.01
+R1,10kΩ,R_0603_1608Metric,MCLR Pull-up Resistor,1,LCSC,C25804,$0.01
+R2,330Ω,R_0603_1608Metric,LED1 Current Limiting,1,LCSC,C23138,$0.01
+R3,330Ω,R_0603_1608Metric,LED2 Current Limiting,1,LCSC,C23138,$0.01
+R4,100kΩ,R_0603_1608Metric,Op-amp Feedback Resistor,1,LCSC,C25803,$0.01
+R5,100kΩ,R_0603_1608Metric,Op-amp Input Resistor,1,LCSC,C25803,$0.01
+R6,1MΩ,R_0603_1608Metric,Antenna Bias Resistor,1,LCSC,C22935,$0.01
+R7,100Ω,R_0603_1608Metric,SPI MOSI Series Resistor,1,LCSC,C22775,$0.01
+R8,100Ω,R_0603_1608Metric,SPI SCK Series Resistor,1,LCSC,C22775,$0.01
+LED1,Green,LED_0603_1608Metric,Power/Status LED,1,LCSC,C72043,$0.02
+LED2,Red,LED_0603_1608Metric,RF Activity LED,1,LCSC,C84256,$0.02
+J1,SPI_Arduino,PinHeader_1x06_P2.54mm_Vertical,Arduino SPI Interface,1,LCSC,C124378,$0.05
+J2,CTRL_Arduino,PinHeader_1x04_P2.54mm_Vertical,Arduino Control Interface,1,LCSC,C124376,$0.04
+J3,ICSP,PinHeader_1x03_P2.54mm_Vertical,ICSP Programming Header,1,LCSC,C124375,$0.03
+J4,ANTENNA,PinHeader_1x02_P2.54mm_Vertical,Antenna Coil Connection,1,LCSC,C124374,$0.02
+,,,,,,TOTAL:,$9.45

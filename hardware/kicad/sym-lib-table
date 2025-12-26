@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "HiTag2_Emulator")(type "KiCad")(uri "${KIPRJMOD}/libraries/HiTag2_Emulator.kicad_sym")(options "")(descr "Hi-Tag 2 Emulator Component Library"))
+)
