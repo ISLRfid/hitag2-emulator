@@ -95,16 +95,15 @@
 | 3 | IRQ | PIC32 → Arduino | Interrupt request |
 | 4 | GND | Ground | Common ground |
 
-### J3 - ICSP Programming Header (1x6 Header)
+### J3 - ICSP Programming Header (1x3 Header)
 
 | Pin | Signal | Notes |
 |-----|--------|-------|
 | 1 | MCLR | Master Clear / VPP |
 | 2 | PGD | Program Data (PGED2) |
 | 3 | PGC | Program Clock (PGEC2) |
-| 4 | GND | Ground |
-| 5 | VDD | 3.3V (optional) |
-| 6 | NC | Not connected |
+
+**Note**: This is a minimal 3-pin ICSP header. GND and VDD must be supplied from the main power supply (connect J1 to Arduino or external 5V source) before programming.
 
 ### J4 - Antenna Connector (1x2 Header)
 

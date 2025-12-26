@@ -112,6 +112,8 @@ cd hitag2-emulator
 - [Circuit Design](docs/Circuit_Design.md) - Detailed explanation of the circuit
 - [Pin Mapping](docs/Pin_Mapping.md) - Complete PIC32 pin assignments
 - [Hi-Tag 2 Protocol](docs/HiTag2_Protocol.md) - Protocol specification
+- [Assembly Guide](docs/Assembly_Guide.md) - PCB assembly instructions
+- [Building Guide](docs/Building.md) - Firmware build and programming instructions
 - [Bill of Materials](hardware/bom/BOM.csv) - Component list with suppliers
 
 ## Schematics

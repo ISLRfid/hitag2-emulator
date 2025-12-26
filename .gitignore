@@ -19,6 +19,19 @@
 *.o
 *.d
 
+# MPLAB X / XC32 outputs
+build/
+dist/
+nbproject/private/
+*.production.hex
+*.production.elf
+funclist
+nbproject/Makefile-*.mk
+nbproject/Package-*.bash
+nbbuild/
+disassembly/
+*.cof
+
 # IDE files
 .idea/
 *.code-workspace
