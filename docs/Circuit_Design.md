@@ -36,6 +36,26 @@ The power supply converts 5V from the Arduino/USB to 3.3V for the PIC32 and anal
 - Output capacitor ensures stable 3.3V rail
 - Decoupling capacitors placed near each VDD pin
 
+**Power Consumption:**
+| Condition | Current Draw | Power | Notes |
+|-----------|--------------|-------|-------|
+| Idle (no RF) | ~40-60mA | ~0.15W | PIC32 running, LEDs off |
+| Active (RF transmitting) | ~150-200mA | ~0.5-0.7W | Includes RF output driver |
+| Programming mode | ~80-100mA | ~0.3W | During ICSP programming |
+
+**Power Supply Requirements:**
+- Minimum 5V @ 250mA input recommended
+- AMS1117-3.3 dropout voltage: ~1.2V
+- USB 2.0 port (500mA) is sufficient
+- USB 3.0 port (900mA) provides extra headroom
+
+**Thermal Considerations:**
+- AMS1117-3.3 dissipation during RF transmission: P = (5V - 3.3V) × 200mA = 340mW
+- SOT-223 package thermal resistance: ~70°C/W
+- Expected temperature rise: 340mW × 70°C/W ≈ 24°C above ambient
+- No heatsink required for normal operation
+- Ensure adequate PCB ground plane for heat dissipation
+
 ### 2. PIC32 Microcontroller
 
 The PIC32MX795F512L is the heart of the emulator, providing:
@@ -142,19 +162,22 @@ Two LEDs indicate system status.
 | LED2 | Red | RF Activity | RB11 (pin 24) |
 
 **Current Calculation:**
-- I = (3.3V - 2V) / 330Ω = 4mA per LED
+- I = (3.3V - Vf) / 330Ω
+- Example: I = (3.3V - 2.0V) / 330Ω ≈ 4mA per LED
+
+**Note**: The forward voltage (Vf) varies by LED type and color (typically 1.8-2.2V for red, 2.0-3.0V for green). Always verify Vf from the LED datasheet. If your LEDs have significantly different forward voltages, adjust the current limiting resistor values (R2, R3) accordingly to achieve the desired brightness. For example, a 3.0V green LED would result in I = (3.3V - 3.0V) / 330Ω ≈ 0.9mA, which may be too dim.
 
 ### 9. ICSP Programming
 
-The ICSP header allows in-circuit programming of the PIC32.
+The ICSP header (J3) allows in-circuit programming of the PIC32. This is a minimal 3-pin configuration.
 
 | Pin | Signal | PIC32 Pin |
 |-----|--------|-----------|
 | 1 | MCLR | 13 |
 | 2 | PGD | 27 (PGED2) |
 | 3 | PGC | 26 (PGEC2) |
-| 4 | GND | VSS |
-| 5 | VDD | VDD |
+
+**Note**: Power (GND and VDD) must be supplied separately through the main power supply (J1) before programming.
 
 ## PCB Design Guidelines
 

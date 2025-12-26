@@ -42,7 +42,7 @@ Before starting, verify you have all components:
 ### Connectors & LEDs
 - [ ] J1: 1x6 pin header (2.54mm)
 - [ ] J2: 1x4 pin header (2.54mm)
-- [ ] J3: 1x6 pin header (2.54mm)
+- [ ] J3: 1x3 pin header (2.54mm)
 - [ ] J4: 1x2 pin header (2.54mm)
 - [ ] LED1: Green LED (0603)
 - [ ] LED2: Red LED (0603)
@@ -159,7 +159,13 @@ The TQFP-100 package requires careful attention:
 2. Connect GND to J1 pin 6
 3. Measure voltage at U2 output: should be 3.3V ±5%
 4. Measure voltage at any VDD pin: should be 3.3V
-5. Check current draw: should be < 50mA (no firmware)
+5. Check current draw: should be 40-60mA (idle with no firmware)
+
+**Expected Power Consumption:**
+- Idle mode: 40-60mA @ 3.3V (~0.15W)
+- Active RF transmission: 150-200mA @ 3.3V (~0.5-0.7W)
+- Ensure power supply can provide minimum 250mA @ 5V
+- USB 2.0 port (500mA) or Arduino 5V pin is sufficient
 
 ### LED Test
 
@@ -171,15 +177,15 @@ With power applied:
 
 ### ICSP Connection
 
-Connect PICkit or ICD to J3:
+Connect PICkit or ICD to J3 (3-pin minimal ICSP header):
 
 | J3 Pin | PICkit Pin | Signal |
 |--------|------------|--------|
 | 1 | 1 | MCLR |
 | 2 | 4 | PGD |
 | 3 | 5 | PGC |
-| 4 | 3 | GND |
-| 5 | 2 | VDD (optional) |
+
+**Note**: GND and VDD must be connected separately from the main power supply (J1 pins 5-6 or external 5V source). Ensure the board is powered before programming.
 
 ### First Program
 
