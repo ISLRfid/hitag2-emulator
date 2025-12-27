@@ -118,6 +118,9 @@ cd hitag2-emulator
 - [Hi-Tag 2 Protocol](docs/HiTag2_Protocol.md) - Protocol specification
 - [Assembly Guide](docs/Assembly_Guide.md) - PCB assembly instructions
 - [Building Guide](docs/Building.md) - Firmware build and programming instructions
+- [Installation Guide](docs/Installation_Guide.md) - Complete firmware installation instructions
+- [User Guide](docs/User_Guide.md) - Flipper Zero app UI usage guide
+- [Troubleshooting Guide](docs/Troubleshooting.md) - Common issues and solutions
 - [Bill of Materials](hardware/bom/BOM.csv) - Component list with suppliers
 
 ## Schematics
