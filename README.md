@@ -50,6 +50,8 @@ This project implements a hardware emulator for Hi-Tag 2 transponders, specifica
 hitag2-emulator/
 ├── README.md                 # This file
 ├── LICENSE                   # MIT License
+├── research/                 # HiTag 2 Protocol & Tech Research
+├── architecture/             # System Architecture & Capabilities
 ├── docs/                     # Documentation
 │   ├── Circuit_Design.md     # Detailed circuit design document
 │   ├── Pin_Mapping.md        # PIC32 pin assignments
@@ -109,6 +111,8 @@ cd hitag2-emulator
 
 ## Documentation
 
+- [HiTag 2 Technology Research](research/HITAG2_Technology_Research.md) - In-depth protocol and technology research
+- [System Architecture](architecture/System_Architecture.md) - Detailed hardware and software architecture
 - [Circuit Design](docs/Circuit_Design.md) - Detailed explanation of the circuit
 - [Pin Mapping](docs/Pin_Mapping.md) - Complete PIC32 pin assignments
 - [Hi-Tag 2 Protocol](docs/HiTag2_Protocol.md) - Protocol specification
