@@ -1,0 +1,17 @@
+App(
+    appid="hitag2_emulator",
+    name="Hi-Tag 2 Emulator",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="hitag2_app",
+    stack_size=2 * 1024,
+    fap_category="RFID",
+    fap_icon="hitag2_app_10px.png",
+    fap_author="Security Research",
+    fap_version="1.0",
+    fap_description="Emulator for Hi-Tag 2 RFID tokens (125 kHz)",
+    fap_webui="",
+    fap_libs=[],
+    fap_srcflags=["-DENABLE_DEBUG"],
+    fap_private_libs=[],
+    fap_icon_assets="",
+)
